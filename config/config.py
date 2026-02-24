@@ -20,36 +20,36 @@ MODEL_CONFIG = {
 # ===================== 文件路径配置 =====================
 FILE_PATHS = {
     # 选择要使用的数据集（注释/取消注释对应行）
-    # "expression_matrix": "./data/expression/expression_Montalvo.csv",
+    "expression_matrix": "./data/expression/expression_Montalvo.csv",
     # "expression_matrix": "./data/expression/expression_Specht.csv",
     # "expression_matrix": "./data/expression/expression_Khan.csv",
     # "expression_matrix": "/home/u2024001153/PythonProject/proteomics-data/Huffman2022v2-Figure456/processed_expression_matrix.csv",
     # "expression_matrix": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure5/processed_expression_matrix.csv",
-    "expression_matrix": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/processed_expression_matrix.csv",
+    # "expression_matrix": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/processed_expression_matrix.csv",
     
     # GO相似性文件路径
-    # "go_similarity": "/home/u2024001153/PythonProject/scmodel3_1016/leduc/GO_CC_similarity_matrix.csv",
+    "go_similarity": "/home/u2024001153/PythonProject/scmodel3_1016/leduc/GO_CC_similarity_matrix.csv",
     # "go_similarity": "/home/u2024001153/PythonProject/scmodel3_1016/SCoPE2/GO_CC_similarity_matrix_Proteins-processed_processed.csv",
     # "go_similarity": "/home/u2024001153/PythonProject/scmodel3_1016/Khan2024/GO_CC_similarity_matrix_npop1_proteinMatrix_Imputed.NoBCByMSRun_processed.csv",
     # "go_similarity": "/home/u2024001153/PythonProject/proteomics-data/Huffman2022v2-Figure456/GO_CC_similarity_matrix_limmaCorrected_normed_prePCA.csv",
     # "go_similarity": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure5/GO_CC_similarity_matrix_plexDIA_SingleCellxProtein_fig5_processed.csv",
-    "go_similarity": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/GO_CC_similarity_matrix_TMT_ProteinxSingleCell_fig7_processed.csv",
+    # "go_similarity": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/GO_CC_similarity_matrix_TMT_ProteinxSingleCell_fig7_processed.csv",
     
     # 细胞标签文件路径
-    # "cell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/leduc/meta.csv",
+    "cell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/leduc/meta.csv",
     # "cell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/SCoPE2/Cells_T.csv",
     # "cell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/Khan2024/oldAlign_npop1_order_id.csv",
     # "cell_labels": "/home/u2024001153/PythonProject/proteomics-data/Huffman2022v2-Figure456/matched_cell_labels.csv",
     # "cell_labels": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure5/matched_cell_labels.csv",
-    "cell_labels": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/matched_cell_labels.csv",
+    # "cell_labels": "/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/matched_cell_labels.csv",
     
     # 超细胞文件路径
-    # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_leduc.csv",
+    "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_leduc.csv",
     # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_SCoPE2.csv",
     # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_Khan2024.csv",
     # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_Huffman2022v2-Figure456.csv",
     # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_Leduc2023-Figure5.csv",
-    "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_Leduc2023-Figure7.csv",
+    # "supercell_labels": "/home/u2024001153/PythonProject/scmodel3_1016/supercell_Leduc2023-Figure7.csv",
     
     # 结果输出目录
     "results_base_dir": "./grid_search_results/",
@@ -59,13 +59,13 @@ FILE_PATHS = {
 
 # ===================== 网格搜索参数配置 =====================
 GRID_SEARCH_PARAMS = {
-    # # Montalvo 参数配置
-    # "n_top_var": [501], # 取全部蛋白维度
-    # "num_protos": [5], # 取真实聚类数
-    # 'alpha': [1.0],
-    # 'beta': [0.1],
-    # 'learning_rate': [0.001],
-    # 'tol': [0.005],
+    # Montalvo 参数配置
+    "n_top_var": [501], # 取全部蛋白维度
+    "num_protos": [5], # 取真实聚类数
+    'alpha': [1.0],
+    'beta': [0.1],
+    'learning_rate': [0.001],
+    'tol': [0.005],
 
     # # Specht 参数配置（取消注释使用）
     # "n_top_var": [3042],
@@ -99,13 +99,13 @@ GRID_SEARCH_PARAMS = {
     # 'learning_rate': [0.001],
     # 'tol': [0.005],
 
-    # Leduc-TMT32 参数配置（取消注释使用）
-    "n_top_var": [1775],
-    "num_protos": [3],
-    'alpha': [0.5],
-    'beta': [0.1],
-    'learning_rate': [1e-4],
-    'tol': [0.01],
+    # # Leduc-TMT32 参数配置（取消注释使用）
+    # "n_top_var": [1775],
+    # "num_protos": [3],
+    # 'alpha': [0.5],
+    # 'beta': [0.1],
+    # 'learning_rate': [1e-4],
+    # 'tol': [0.01],
     
     # 通用配置
     "gamma": [1.0],
@@ -124,9 +124,9 @@ ENV_CONFIG = {
 # ===================== 细胞标签列名配置 =====================
 LABEL_COLUMNS = {
     # 根据使用的数据集选择对应的列名
-    # "cell_type_column": "Cell_type",  # Montalvo
+    "cell_type_column": "Cell_type",  # Montalvo
     # "cell_type_column": "celltype",   # Specht/Huffman
     # "cell_type_column": "cellType",   # Khan
-    "cell_type_column": "sample",      # Leduc-plexDIA/Leduc-TMT32
+    # "cell_type_column": "sample",      # Leduc-plexDIA/Leduc-TMT32
     "supercell_column": "supercell_label"
 }
