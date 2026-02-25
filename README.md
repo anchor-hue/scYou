@@ -21,7 +21,7 @@
 └── README.md # 运行说明
 ```
 
-这里data文件夹未给出，可通过zenode下载完整数据：[Code for scYOU](https://zenodo.org/records/18756874)。
+这里data文件夹未给出，可通过zenodo下载完整数据：[Code for scYOU](https://zenodo.org/records/18756874)。
 
 
 
@@ -131,4 +131,5 @@ python main.py
 
 - 运行完成后，最优参数和聚类指标会直接输出到控制台
 - 损失曲线和聚类对比结果会保存到`./grid_search_results/`目录下
+
 
