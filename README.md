@@ -21,7 +21,7 @@ scYOU/
 └── README.md                # Usage instructions
 ```
 
-> Note: The `data` directory is not included in this repository.  
+> Note: Some excessively large data files are not included in `data` directory in this repository.
 > The complete dataset can be downloaded from Zenodo:  
 > **[Code for scYOU](https://zenodo.org/records/18756874)**
 
