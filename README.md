@@ -162,4 +162,4 @@ After execution:
 * **Loss curves** and **Learned embeddings** will be saved in `./grid_search_results/`.
 
 ## Note
-* If you are using a new dataset, please generate the GO similarity matrix and the supercell grouping labels before running the code (refer to the "Materials and Methods" section in the article). We have provided the file **`supercell_construct.py`** here for generating the supercell grouping labels.
+* If you are using a new dataset, please generate the GO similarity matrix and the supercell grouping labels (refer to the "Materials and Methods" section in the article) before running the code. We have provided the file **`supercell_construct.py`** here for generating the supercell grouping labels.
