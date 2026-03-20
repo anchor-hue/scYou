@@ -16,9 +16,10 @@ scYOU/
 │   ├── models.py            # Model architecture definitions
 │   ├── trainer.py           # Training pipeline
 │   └── utils.py             # Utility functions
+├── README.md                # Usage instructions
 ├── main.py                  # Main program entry point
 ├── requirements.txt         # Environment dependencies
-└── README.md                # Usage instructions
+└── supercell_construct.py   # Generate supercell grouping labels
 ```
 
 > Note: Some excessively large data files are not included in `data` directory in this repository.
@@ -159,3 +160,6 @@ After execution:
 
 * **clustering metrics** will be printed in the console.
 * **Loss curves** and **Learned embeddings** will be saved in `./grid_search_results/`.
+
+## Note
+> If you are using a new dataset, please generate the GO similarity matrix and the supercell grouping labels before running the code (refer to the "Materials and Methods" section in the article). We have provided the file **`supercell_construct.py`** here for generating the supercell grouping labels.
