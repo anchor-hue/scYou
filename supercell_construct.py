@@ -204,38 +204,14 @@ def calculate_supercell_purity(supercell_labels, true_labels):
 
 # 假设已有细胞×蛋白矩阵
 
-# proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/scmodel3_1016/leduc/Protein_imputed.csv') #5 843*501
-# proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/scmodel3_1016/SCoPE2/Proteins-processed_processed.csv') #2 1490*3042
-# proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/scmodel3_1016/Khan2024/npop1_proteinMatrix_Imputed.NoBCByMSRun_processed.csv') #6 1408*3178
-
-# proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/proteomics-data/Huffman2022v2-Figure456/processed_expression_matrix.csv') #2 373*1123
-
-proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure5/processed_expression_matrix.csv') #3 121*4619
-# proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/processed_expression_matrix.csv') #3 1526*1775
+proteins_list, cell_list, expression_matrix = myload_sc_proteomic_features('./data/expression/expression_Leduc-plexDIA.csv')
 
 # 打印矩阵形状进行验证
 print(f"Expression matrix shape: {expression_matrix.shape}")
 
 # 加载真实标签
-
-# meta_df = pd.read_csv('/home/u2024001153/PythonProject/scmodel3_1016/leduc/meta.csv', index_col=0)
-# meta_df = pd.read_csv('/home/u2024001153/PythonProject/scmodel3_1016/SCoPE2/Cells_T.csv', index_col=0)
-# meta_df = pd.read_csv('/home/u2024001153/PythonProject/scmodel3_1016/Khan2024/oldAlign_npop1_order_id.csv', index_col=0)
-
-# meta_df = pd.read_csv('/home/u2024001153/PythonProject/proteomics-data/Huffman2022v2-Figure456/matched_cell_labels.csv', index_col=0)
-
-meta_df = pd.read_csv('/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure5/matched_cell_labels.csv', index_col=0)
-# meta_df = pd.read_csv('/home/u2024001153/PythonProject/proteomics-data/Leduc2023-Figure7/matched_cell_labels.csv', index_col=0)
-
-
-# true_labels = meta_df['Cell_type'].values
-# true_labels = meta_df['celltype'].values
-# true_labels = meta_df['cellType'].values
-
-# true_labels = meta_df['celltype'].values
-
+meta_df = pd.read_csv('./data/meta/meta_Leduc-plexDIA.csv', index_col=0)
 true_labels = meta_df['sample'].values
-# true_labels = meta_df['sample'].values
 
 print(f"True labels shape: {true_labels.shape}")
 
@@ -249,7 +225,7 @@ supercell_labels = construct_supercell_graph(
 
 # 保存结果
 print(f"Saving supercell labels with shape: {supercell_labels.shape}")
-pd.DataFrame(supercell_labels, columns=['supercell_label']).to_csv("./supercell_Leduc2023-Figure5.csv", index=False)
+pd.DataFrame(supercell_labels, columns=['supercell_label']).to_csv("./data/supercell/supercell_Leduc-plexDIA.csv", index=False)
 
 # 计算纯度
 purity_dict, avg_purity = calculate_supercell_purity(supercell_labels, true_labels)
@@ -260,6 +236,6 @@ for sc_label, purity in purity_dict.items():
 
 print(f"\n平均纯度: {avg_purity:.3f}")
 
-# 保存纯度结果
-purity_df = pd.DataFrame(list(purity_dict.items()), columns=['Supercell', 'Purity'])
-purity_df.to_csv("./supercell_purity_Leduc2023-Figure5.csv", index=False)
+# # 保存纯度结果
+# purity_df = pd.DataFrame(list(purity_dict.items()), columns=['Supercell', 'Purity'])
+# purity_df.to_csv("./data/supercell/supercell_purity_Leduc-plexDIA.csv", index=False)
