@@ -24,7 +24,7 @@ scYOU/
 
 > Note: Some excessively large data files are not included in `data` directory in this repository.
 > The complete dataset can be downloaded from Zenodo:  
-> **[Code for scYOU](https://zenodo.org/records/18756874)**
+> **[Code for scYOU](http://mialab.ruc.edu.cn/scYOU/zip)**
 
 ---
 
