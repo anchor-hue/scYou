@@ -23,8 +23,8 @@ scYOU/
 ```
 
 > Note: Some excessively large data files are not included in `data` directory in this repository.
-> The complete dataset can be downloaded from Zenodo:  
-> **[Code for scYOU](http://mialab.ruc.edu.cn/scYOU/zip)**
+> The complete dataset can be downloaded from MIALAB and Zenodo:  
+> **[http://mialab.ruc.edu.cn/scYOU/zip](http://mialab.ruc.edu.cn/scYOU/zip)**, **[https://zenodo.org/records/18756874](https://zenodo.org/records/18756874)**
 
 ---
 
