@@ -48,8 +48,8 @@ FILE_PATHS = {
     # "supercell_labels": "./data/supercell/supercell_Specht.csv",
     # "supercell_labels": "./data/supercell/supercell_Khan.csv",
     # "supercell_labels": "./data/supercell/supercell_Huffman.csv",
-    # "supercell_labels": "./data/supercell/meta_Leduc-plexDIA.csv",
-    # "supercell_labels": "./data/supercell/GO_Leduc-TMT32.csv",
+    # "supercell_labels": "./data/supercell/supercell_Leduc-plexDIA.csv",
+    # "supercell_labels": "./data/supercell/supercell_Leduc-TMT32.csv",
     
     # 结果输出目录
     "results_base_dir": "./grid_search_results/",
