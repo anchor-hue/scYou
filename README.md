@@ -20,7 +20,7 @@ scYOU/
 ├── main.py                           # Main program entry point
 ├── requirements.txt                  # Environment dependencies
 ├── supercell_construct.py            # Generate supercell grouping labels
-└── cluster_number_estimation.py      # Label-free cluster-number estimation by spectral eigengap
+└── estimate_k_eigengap.py      # Label-free cluster-number estimation by spectral eigengap
 ```
 
 > Note: Some excessively large data files are not included in the `data` directory of this repository.
@@ -168,7 +168,7 @@ After execution:
 
 For analyses in which the number of cell populations is not assumed to be known in advance, scYOU provides a spectral eigengap procedure for estimating the cluster number $K$ directly from the processed protein-expression matrix.
 
-The implementation is provided in **`cluster_number_estimation.py`**. The procedure:
+The implementation is provided in **`estimate_k_eigengap.py`**. The procedure:
 
 1. reads each protein-by-cell expression matrix and converts it to a cell-by-protein matrix;
 2. replaces missing values with zero and removes zero-variance proteins;
@@ -182,7 +182,7 @@ This procedure does not use cell-type annotations, ARI, NMI, or other ground-tru
 ### 3.1 Example command
 
 ```bash
-python cluster_number_estimation.py \
+python estimate_k_eigengap.py \
   --input-dir ./data/expression \
   --output-dir ./cluster_number_results \
   --pattern "*.csv" \
@@ -213,7 +213,7 @@ The output table contains the dataset name, numbers of cells and proteins, PCA d
 The `num_protos` value in `config.py` controls the number of clusters used by the clustering module.
 
 - **Known-K benchmark:** set `num_protos` to the annotated number of cell populations.
-- **Label-free analysis:** first run `cluster_number_estimation.py`, then set `num_protos` to the corresponding `estimated_K` reported in `cluster_number_summary.csv`.
+- **Label-free analysis:** first run `estimate_k_eigengap.py`, then set `num_protos` to the corresponding `estimated_K` reported in `cluster_number_summary.csv`.
 
 
 ## Note
