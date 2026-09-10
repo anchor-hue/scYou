@@ -86,7 +86,7 @@ FILE_PATHS = {
     "supercell_labels": "./data/supercell/supercell_Montalvo.csv",
 
     # Output directories
-    "results_base_dir": "./grid_search_results/",
+    "results_base_dir": "./results/",
     "loss_plots_dir": "./loss_curves/",
     "embeddings_dir": "./embeddings/"
 }
@@ -139,7 +139,7 @@ GRID_SEARCH_PARAMS = {
 ENV_CONFIG = {
     "global_seed": 42,
     "device": torch.device("cuda:6" if torch.cuda.is_available() else "cpu"),
-    "result_output_dir": "./grid_search_results/"
+    "result_output_dir": "./results/"
 }
 ```
 
@@ -160,7 +160,7 @@ python main.py
 After execution:
 
 * **clustering metrics** will be printed in the console.
-* **Loss curves** and **Learned embeddings** will be saved in `./grid_search_results/`.
+* **Loss curves** and **Learned embeddings** will be saved in `./results/`.
 
 ---
 
